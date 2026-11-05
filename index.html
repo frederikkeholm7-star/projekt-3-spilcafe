@@ -16,6 +16,21 @@
         </header>
 
         <main>
+            <div class="search-container"> 
+                <input type="search" id="search-input" placeholder="Search games" class="search-input">
+                <select id="predefined-search" class="predefined-select"> </select>
+                <option value=""> Sort </option>
+                    <option value="">Sort by</option>
+                    <option value="name">Name (A-Z)</option>
+                    <option value="time">Playing time (Shortest first)</option>
+                    <option value="difficulty">Difficulty (Easiest first)</option>
+                    <option value="players">Number of players (Fewest first)</option>
+                </select>
+
+                <button id="filter-toggle" class="filter-button">
+                    <span>Filter</span>
+                </button>
+            </div>
 
         </main>
 
