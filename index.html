@@ -16,10 +16,9 @@
         </header>
 
         <main>
-            <div class="search-container"> 
+            <div class="search-container">
                 <input type="search" id="search-input" placeholder="Search games" class="search-input">
-                <select id="predefined-search" class="predefined-select"> </select>
-                <option value=""> Sort </option>
+                <select id="predefined-search" class="predefined-select">
                     <option value="">Sort by</option>
                     <option value="name">Name (A-Z)</option>
                     <option value="time">Playing time (Shortest first)</option>
@@ -34,113 +33,106 @@
 
             <!-- Filter panel -->
             <div id="filter-panel" class="filter-panel">
-            <div class="filter-header"> 
-                <h2>Filter</h2>
-                <button id="filter-close" class="filter-close">&times;</button>
-            </div>
+                <div class="filter-header">
+                    <h2>Filter</h2>
+                    <button id="filter-close" class="filter-close">&times;</button>
+                </div>
 
-            <!--Filter content-->
-            <div class="filter-content">
+                <!--Filter content-->
+                <div class="filter-content">
 
-            <!-- Players -->
-            <div class="filter-group">
-                <label class="filter-label">Players</label>
+                    <!-- Players -->
+                    <div class="filter-group">
+                        <label class="filter-label">Players</label>
 
-             <div class="players-group">
-                <label class="players-label">
-                    <input type="radio" name="players" value="1">
-                    1
-                 </label>
+                        <div class="players-group">
+                            <label class="players-label">
+                                <input type="radio" name="players" value="1">
+                                1
+                            </label>
 
-                <label class="players-label">
-                    <input type="radio" name="players" value="2">
-                    2
-                </label>
+                            <label class="players-label">
+                                <input type="radio" name="players" value="2">
+                                2
+                            </label>
 
-                <label class="players-label">
-                    <input type="radio" name="players" value="3">
-                    3
-                </label>
+                            <label class="players-label">
+                                <input type="radio" name="players" value="3">
+                                3
+                            </label>
 
-                <label class="players-label">
-                    <input type="radio" name="players" value="4">
-                    4
-                </label>
+                            <label class="players-label">
+                                <input type="radio" name="players" value="4">
+                                4
+                            </label>
 
-                <label class="players-label">
-                    <input type="radio" name="players" value="5">
-                    5
-                </label>
+                            <label class="players-label">
+                                <input type="radio" name="players" value="5">
+                                5
+                            </label>
 
-                <label class="players-label">
-                    <input type="radio" name="players" value="6">
-                    6+
-                </label>
-            </div>
-        </div>
+                            <label class="players-label">
+                                <input type="radio" name="players" value="6">
+                                6+
+                            </label>
+                        </div>
+                    </div>
 
-            <!-- Playing time -->
-            <div class="filter-group">
-                <label for="playing-time" class="filter-label">Playing time</label>
+                    <!-- Playing time -->
+                    <div class="filter-group">
+                        <label for="playing-time" class="filter-label">Playing time</label>
 
-            <div class="time-group">
-                <span id="time-value">Up to 60 min</span>
+                        <div class="time-group">
+                            <span id="time-value">Up to 60 min</span>
 
-            <input
-            type="range"
-            id="playing-time"
-            min="15"
-            max="120"
-            value="60"
-            step="15"
-            >
+                            <input type="range" id="playing-time" min="15" max="120" value="60" step="15">
 
-            <div class="time-labels">
-                <span>15 min</span>
-                <span>120+ min</span>
-            </div>
-        </div>
-    </div>
+                            <div class="time-labels">
+                                <span>15 min</span>
+                                <span>120+ min</span>
+                            </div>
+                        </div>
+                    </div>
 
-            <!--Category-->
-            <div class="filter-group">
-                    <label class="filter-label">Category</label>
-                    <div class="checkbox-group">
+                    <!--Category-->
+                    <div class="filter-group">
+                        <label class="filter-label">Category</label>
+                        <div class="checkbox-group">
 
-                <label class="checkbox-label">
-                    <input type="checkbox" name="category" value="strategy">
-                    Strategy
-                </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="category" value="strategy">
+                                Strategy
+                            </label>
 
-                <label class="checkbox-label">
-                    <input type="checkbox" name="category" value="party">
-                    Party
-                </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="category" value="party">
+                                Party
+                            </label>
 
-                <label class="checkbox-label">
-                    <input type="checkbox" name="category" value="family">
-                    Family
-                </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="category" value="family">
+                                Family
+                            </label>
 
-                <label class="checkbox-label">
-                    <input type="checkbox" name="category" value="cooperative">
-                    Cooperative
-                </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="category" value="cooperative">
+                                Cooperative
+                            </label>
 
-                <label class="checkbox-label">
-                    <input type="checkbox" name="category" value="card-game">
-                Card game
-                </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="category" value="card-game">
+                                Card game
+                            </label>
 
-                <label class="checkbox-label">
-                    <input type="checkbox" name="category" value="trivia">
-                    Trivia
-                </label>
-            </div>
-        </div>
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="category" value="trivia">
+                                Trivia
+                            </label>
+                        </div>
+                    </div>
 
-            
-        
+
+
 
 
 
