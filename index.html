@@ -159,7 +159,26 @@
 
 
     </div>
+    <dialog id="game-dialog">
+        <article class="dialog-content">
+            <img id="dialog-image" src="" alt="" class="game-image">
+            <h2 id="dialog-title"></h2>
+            <p id="dialog-description"></p>
 
+            <div class="game-meta">
+                <span id="dialog-players" class="game-players"></span>
+                <span id="dialog-time" class="game-time"></span>
+                <span id="dialog-category" class="game-category"></span>
+
+            </div>
+
+            <div id="dialog-difficulty" class="game-difficulty"></div>
+            <menu class="dialog-actions">
+                <button id="dialog-close" value="cancel">Close</button>
+            </menu>
+        </article>
+    </dialog>
+    <div id="overlay" class="overlay"></div>
 </body>
 
 </html>
