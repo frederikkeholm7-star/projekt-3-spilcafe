@@ -22,6 +22,14 @@ function displayGames(list) {
     gameCard.innerHTML = `
     <img src="${game.image}" alt="${game.title}"
     class="game-image">
+        <h3 class="game-title">${game.title}</h3>
+
+        <div class="game-meta">
+            <span class="players">${game.minPlayers}-${game.maxPlayers} Players</span>
+
+            <span class="time">${game.minTime}-${game.maxTime} min</span>
+        </div>
+
     `;
   });
 }
