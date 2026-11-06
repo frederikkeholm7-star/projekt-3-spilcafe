@@ -52,6 +52,7 @@ function showGameDialog(id) {
 
   gameDialog.showModal();
 }
+dialogCloseButton.addEventListener("click", () => gameDialog.close());
 
 window.addEventListener("DOMContentLoaded", () => {
   displayGames(games);
