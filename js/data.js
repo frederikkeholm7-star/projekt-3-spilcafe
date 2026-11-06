@@ -100,10 +100,17 @@ const games = [
   {
     id: 5,
     title: "Codenames",
-    description:
-      "In Codenames, you split into two teams. Each team leader gives a clue consisting of one word and a number, and their team must guess the corresponding code names. The first team to find all their agents wins – but if you pick the assassin, you lose immediately.",
-    rules:
-      "Divide into two teams, each with a Spymaster. The Spymaster gives a one-word clue and a number to help their team guess the correct words. Teammates discuss and select words based on the clue. Avoid choosing the opposing team's words or the assassin, which causes an instant loss. Teams take turns guessing. The first team to find all their agents wins!",
+    description: 
+      "In Codenames, you split into two teams. Each team leader gives a clue consisting of one word and a number, and their team must guess the corresponding code names. The first team to find all their agents wins, but if you pick the assassin, you lose immediately.",
+    rules: [ 
+      "Divide into two teams, each with a Spymaster.",
+      "The Spymaster gives a one-word clue and a number to help their team guess the correct words.",
+      "Teammates discuss and select words based on the clue.",
+      "Avoid choosing the opposing team's words or the assassin, which causes an instant loss.",
+      " Teams take turns guessing.", 
+    ],
+    winning:
+    "The first team to find all their agents wins!",
     minPlayers: 4,
     maxPlayers: 8,
     minTime: 15,
@@ -119,8 +126,16 @@ const games = [
     title: "Bad Company",
     description:
       "The game is about completing unfinished sentences with the most ridiculous, dark, and inappropriate answer cards. You can learn how to play in less than a minute.",
-    rules:
-      "Each player receives 10 answer cards. One player is chosen as the judge and reads a question card aloud. The other players choose the funniest answer card and submit it face down. The judge shuffles the answers, reads them aloud, and chooses the funniest combination. The player with the best answer earns 1 point. Everyone draws new answer cards, and a new player becomes the judge. Play as many rounds as you like. The player with the most points at the end wins!",
+    rules: [
+      "Each player receives 10 answer cards.",
+      "One player is chosen as the judge and reads a question card aloud.",
+      "The other players choose the funniest answer card and submit it face down.",
+      "The judge shuffles the answers, reads them aloud, and chooses the funniest combination.",
+      "The player with the best answer earns 1 point.", 
+      "Everyone draws new answer cards, and a new player becomes the judge.",
+    ],
+    winning:
+    "Play as many rounds as you like. The player with the most points at the end wins!",
     minPlayers: 3,
     maxPlayers: 16,
     minTime: 30,
@@ -136,8 +151,16 @@ const games = [
     title: "Stratego",
     description:
       "Stratego is a classic two-player game of tactical skill, hidden information, and deception, played on a 10×10 grid. The primary objective of the game is to locate and capture your opponent's Flag, or to reduce your opponent's forces to a point where they can no longer make a legal move.",
-    rules:
-      "Each player secretly places their 40 pieces on the four back rows of the board. The pieces have different ranks, which are hidden from the opponent. Players take turns moving one piece at a time, usually one square horizontally or vertically. Attack by moving your piece onto a square occupied by an opponent's piece. Both pieces are revealed. The lower-ranked piece is removed from the game. If both have the same rank, both are removed. Bombs cannot move and can only be removed by miners. The spy can defeat the marshal if the spy attacks first. The first player to capture the opponent's flag wins! You also win if your opponent can no longer make a legal move.",
+    rules:[
+      "Each player secretly places their 40 pieces on the four back rows of the board.",
+      "The pieces have different ranks, which are hidden from the opponent.",
+      "Players take turns moving one piece at a time, usually one square horizontally or vertically.",
+      "Attack by moving your piece onto a square occupied by an opponent's piece.",
+      "Both pieces are revealed. The lower-ranked piece is removed from the game. If both have the same rank, both are removed.",
+      "Bombs cannot move and can only be removed by miners. The spy can defeat the marshal if the spy attacks first.",
+    ],
+    winning:
+    "The first player to capture the opponent's flag wins! You also win if your opponent can no longer make a legal move.",
     minPlayers: 2,
     maxPlayers: 2,
     minTime: 45,
@@ -153,8 +176,16 @@ const games = [
     title: "Cluedo",
     description:
       "A detective board game in which players solve a murder by determining who committed it, which weapon was used, and where it took place. Players gather clues and eliminate possibilities to solve the mystery.",
-    rules:
-      "Secretly place one suspect card, one weapon card, and one room card inside the confidential case file. Shuffle and deal the remaining cards among the players. Players take turns rolling the dice and moving through the rooms of the mansion. When you enter a room, you can make a suggestion involving a suspect, a weapon, and that room. Other players must try to disprove your suggestion by secretly showing you one matching card, if they have one. Use your notes to eliminate suspects, weapons, and rooms until you think you have solved the mystery. The first player to make a correct final accusation identifying the murderer, weapon, and room wins! If your accusation is incorrect, you can no longer win the game.",
+    rules:[
+      "Secretly place one suspect card, one weapon card, and one room card inside the confidential case file.",
+      "Shuffle and deal the remaining cards among the players.",
+      "Players take turns rolling the dice and moving through the rooms of the mansion.", 
+      "When you enter a room, you can make a suggestion involving a suspect, a weapon, and that room.",
+      "Other players must try to disprove your suggestion by secretly showing you one matching card, if they have one.", 
+      "Use your notes to eliminate suspects, weapons, and rooms until you think you have solved the mystery.",
+    ],
+    winning:
+    "The first player to make a correct final accusation identifying the murderer, weapon, and room wins! If your accusation is incorrect, you can no longer win the game.",
     minPlayers: 2,
     maxPlayers: 6,
     minTime: 45,
