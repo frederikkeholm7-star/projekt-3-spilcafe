@@ -86,6 +86,13 @@ filterButton.addEventListener("click", toggleFilterPanel);
 filterPanelCloseButton.addEventListener("click", closeFilterPanel);
 darkOverlay.addEventListener("click", closeFilterPanel);
 
+// Lukker filterpanelet med Escape-tasten
+window.addEventListener("keydown", (event) => {
+  if (event.key === "Escape") {
+    closeFilterPanel();
+  }
+});
+
 // Viser alle spil, når DOM'en er indlæst
 window.addEventListener("DOMContentLoaded", () => {
   displayGames(games);
