@@ -100,17 +100,16 @@ const games = [
   {
     id: 5,
     title: "Codenames",
-    description: 
+    description:
       "In Codenames, you split into two teams. Each team leader gives a clue consisting of one word and a number, and their team must guess the corresponding code names. The first team to find all their agents wins, but if you pick the assassin, you lose immediately.",
-    rules: [ 
+    rules: [
       "Divide into two teams, each with a Spymaster.",
       "The Spymaster gives a one-word clue and a number to help their team guess the correct words.",
       "Teammates discuss and select words based on the clue.",
       "Avoid choosing the opposing team's words or the assassin, which causes an instant loss.",
-      " Teams take turns guessing.", 
+      " Teams take turns guessing.",
     ],
-    winning:
-    "The first team to find all their agents wins!",
+    winning: "The first team to find all their agents wins!",
     minPlayers: 4,
     maxPlayers: 8,
     minTime: 15,
@@ -131,11 +130,11 @@ const games = [
       "One player is chosen as the judge and reads a question card aloud.",
       "The other players choose the funniest answer card and submit it face down.",
       "The judge shuffles the answers, reads them aloud, and chooses the funniest combination.",
-      "The player with the best answer earns 1 point.", 
+      "The player with the best answer earns 1 point.",
       "Everyone draws new answer cards, and a new player becomes the judge.",
     ],
     winning:
-    "Play as many rounds as you like. The player with the most points at the end wins!",
+      "Play as many rounds as you like. The player with the most points at the end wins!",
     minPlayers: 3,
     maxPlayers: 16,
     minTime: 30,
@@ -151,7 +150,7 @@ const games = [
     title: "Stratego",
     description:
       "Stratego is a classic two-player game of tactical skill, hidden information, and deception, played on a 10×10 grid. The primary objective of the game is to locate and capture your opponent's Flag, or to reduce your opponent's forces to a point where they can no longer make a legal move.",
-    rules:[
+    rules: [
       "Each player secretly places their 40 pieces on the four back rows of the board.",
       "The pieces have different ranks, which are hidden from the opponent.",
       "Players take turns moving one piece at a time, usually one square horizontally or vertically.",
@@ -160,7 +159,7 @@ const games = [
       "Bombs cannot move and can only be removed by miners. The spy can defeat the marshal if the spy attacks first.",
     ],
     winning:
-    "The first player to capture the opponent's flag wins! You also win if your opponent can no longer make a legal move.",
+      "The first player to capture the opponent's flag wins! You also win if your opponent can no longer make a legal move.",
     minPlayers: 2,
     maxPlayers: 2,
     minTime: 45,
@@ -176,16 +175,16 @@ const games = [
     title: "Cluedo",
     description:
       "A detective board game in which players solve a murder by determining who committed it, which weapon was used, and where it took place. Players gather clues and eliminate possibilities to solve the mystery.",
-    rules:[
+    rules: [
       "Secretly place one suspect card, one weapon card, and one room card inside the confidential case file.",
       "Shuffle and deal the remaining cards among the players.",
-      "Players take turns rolling the dice and moving through the rooms of the mansion.", 
+      "Players take turns rolling the dice and moving through the rooms of the mansion.",
       "When you enter a room, you can make a suggestion involving a suspect, a weapon, and that room.",
-      "Other players must try to disprove your suggestion by secretly showing you one matching card, if they have one.", 
+      "Other players must try to disprove your suggestion by secretly showing you one matching card, if they have one.",
       "Use your notes to eliminate suspects, weapons, and rooms until you think you have solved the mystery.",
     ],
     winning:
-    "The first player to make a correct final accusation identifying the murderer, weapon, and room wins! If your accusation is incorrect, you can no longer win the game.",
+      "The first player to make a correct final accusation identifying the murderer, weapon, and room wins! If your accusation is incorrect, you can no longer win the game.",
     minPlayers: 2,
     maxPlayers: 6,
     minTime: 45,
@@ -199,13 +198,16 @@ const games = [
   {
     id: 9,
     title: "Wavelength",
-    description: "In the party game Wavelength, teams score points by using a Psychic's clue to guess where a hidden target lies on a spectrum between two opposite concepts." , 
-    rules: ["Divide into two teams. Each team takes turns choosing a player to give clues.",
-        " The clue giver secretly looks at where the target is positioned on the scale.", 
-        "A card shows two opposites, such as Hot - Cold or Cheap - Expensive The clue giver provides one clue to help their team guess the target's location.",
-        "The team discusses the clue and moves the dial to where they think the target is.",
-        "The target is revealed, and the team earns 2-4 points depending on how close they are.",
-        "The opposing team can also earn 1 point by correctly guessing which side of the target the dial lands on."],
+    description:
+      "In the party game Wavelength, teams score points by using a Psychic's clue to guess where a hidden target lies on a spectrum between two opposite concepts.",
+    rules: [
+      "Divide into two teams. Each team takes turns choosing a player to give clues.",
+      " The clue giver secretly looks at where the target is positioned on the scale.",
+      "A card shows two opposites, such as Hot - Cold or Cheap - Expensive The clue giver provides one clue to help their team guess the target's location.",
+      "The team discusses the clue and moves the dial to where they think the target is.",
+      "The target is revealed, and the team earns 2-4 points depending on how close they are.",
+      "The opposing team can also earn 1 point by correctly guessing which side of the target the dial lands on.",
+    ],
     winning: "The first team to reach 10 points wins.",
     minPlayers: 2,
     maxPlayers: 12,
@@ -220,14 +222,17 @@ const games = [
   {
     id: 10,
     title: "Playing cards",
-    description: "A classic deck of 52 playing cards that can be used for a wide range of games. Players choose for themselves whether to play something quick and simple or a more tactical game.",
-    rules: ["A standard deck consists of 52 cards divided into four suits: hearts, diamonds, spades, and clubs.",
-        "The cards are shuffled before the game begins.",
-        "Each player receives a certain number of cards depending on the game.",
-        "Players take turns drawing, playing, or collecting cards.",
-        "Each card game has its own rules and objectives.", 
-        "You can play card games such as Go Fish, War, and President."],
-    winning: "The winner is determined by the rules of the chosen game.", 
+    description:
+      "A classic deck of 52 playing cards that can be used for a wide range of games. Players choose for themselves whether to play something quick and simple or a more tactical game.",
+    rules: [
+      "A standard deck consists of 52 cards divided into four suits: hearts, diamonds, spades, and clubs.",
+      "The cards are shuffled before the game begins.",
+      "Each player receives a certain number of cards depending on the game.",
+      "Players take turns drawing, playing, or collecting cards.",
+      "Each card game has its own rules and objectives.",
+      "You can play card games such as Go Fish, War, and President.",
+    ],
+    winning: "The winner is determined by the rules of the chosen game.",
     minPlayers: 2,
     maxPlayers: 10,
     minTime: 45,
@@ -241,19 +246,23 @@ const games = [
   {
     id: 11,
     title: "Tapple: After Dark",
-    description: "An adult party game in which players must think of words that match a given topic and start with an available letter. Players have only 10 seconds to answer, and letters that have already been used cannot be used again during the round. The game features adult-oriented and humorous topics.",
-    rules: ["Place the Tapple wheel in the center of the table and choose a category card.",
-        "The first player has 10 seconds to name a word that fits the category and starts with an available letter.",
-        "The player presses the corresponding letter on the wheel and resets the timer.",
-        "The next player must come up with a new word starting with a different available letter.",
-        "Letters that have already been used cannot be used again during the same round.",
-        "If a player fails to answer within 10 seconds or gives an invalid answer, they are eliminated from the round."],
-    winning: "The last player remaining wins the round and collects the category card. The first player to collect 3 cards wins the game!",
+    description:
+      "An adult party game in which players must think of words that match a given topic and start with an available letter. Players have only 10 seconds to answer, and letters that have already been used cannot be used again during the round. The game features adult-oriented and humorous topics.",
+    rules: [
+      "Place the Tapple wheel in the center of the table and choose a category card.",
+      "The first player has 10 seconds to name a word that fits the category and starts with an available letter.",
+      "The player presses the corresponding letter on the wheel and resets the timer.",
+      "The next player must come up with a new word starting with a different available letter.",
+      "Letters that have already been used cannot be used again during the same round.",
+      "If a player fails to answer within 10 seconds or gives an invalid answer, they are eliminated from the round.",
+    ],
+    winning:
+      "The last player remaining wins the round and collects the category card. The first player to collect 3 cards wins the game!",
     minPlayers: 1,
     maxPlayers: 99,
     minTime: 5,
     maxTime: 15,
-    categories:["carty-game", "trivia", "mature-adult"],
+    categories: ["party-game", "trivia", "mature-adult"],
     difficulty: 1.5,
     age: 18,
     image: "img/tapple-after-dark.png",
@@ -262,15 +271,18 @@ const games = [
   {
     id: 12,
     title: "Liar's UNO",
-    description: "A card game in which players try to get rid of all their cards by matching colors, numbers, or symbols. Special Cards are played face down, and the player announces what the card is. The player can tell the truth or bluff. If a lie is exposed, the player is penalized, while an incorrect accusation penalizes the challenger.",
-    rules: ["Each player receives 7 cards, and the remaining cards form a draw pile.",  
-        "Players take turns playing cards that match the color, number, or symbol of the top card.", 
-        "Special Liar's Cards are played face down.",
-        "The player announces which card they are playing but may choose to bluff.", 
-        "Other players can challenge the card if they suspect the player is lying.",
-        "If the player is caught lying, they must take back their card and draw 1 additional card.",
-        "If the accusation is wrong, the challenger must draw 1 card.",
-        "Remember to shout 'UNO!' when you have only one card left."],
+    description:
+      "A card game in which players try to get rid of all their cards by matching colors, numbers, or symbols. Special Cards are played face down, and the player announces what the card is. The player can tell the truth or bluff. If a lie is exposed, the player is penalized, while an incorrect accusation penalizes the challenger.",
+    rules: [
+      "Each player receives 7 cards, and the remaining cards form a draw pile.",
+      "Players take turns playing cards that match the color, number, or symbol of the top card.",
+      "Special Liar's Cards are played face down.",
+      "The player announces which card they are playing but may choose to bluff.",
+      "Other players can challenge the card if they suspect the player is lying.",
+      "If the player is caught lying, they must take back their card and draw 1 additional card.",
+      "If the accusation is wrong, the challenger must draw 1 card.",
+      "Remember to shout 'UNO!' when you have only one card left.",
+    ],
     winning: "The first player to get rid of all their cards wins the round!",
     minPlayers: 2,
     maxPlayers: 6,
