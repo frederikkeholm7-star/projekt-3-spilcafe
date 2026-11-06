@@ -12,4 +12,11 @@ const filterPanel = document.getElementById("filter-panel");
 const filterPanelCloseButton = document.getElementById("filter-close");
 const darkOverlay = document.getElementById("overlay");
 
-function displayGames(list) {}
+function displayGames(list) {
+  gameList.innerHTML = "";
+
+  list.forEach((game) => {
+    const gameCard = document.createElement("div");
+    gameCard.className = "game-card";
+  });
+}
