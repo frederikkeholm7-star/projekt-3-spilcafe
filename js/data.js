@@ -107,7 +107,7 @@ const games = [
     minPlayers: 4,
     maxPlayers: 8,
     minTime: 15,
-    maxTime: 0,
+    maxTime: 30,
     categories: ["party-game"],
     difficulty: 1.3,
     age: 10,
