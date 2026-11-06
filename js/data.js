@@ -221,7 +221,7 @@ const games = [
 
   {
     id: 10,
-    title: "Playing cards",
+    title: "Playing Cards",
     description:
       "A classic deck of 52 playing cards that can be used for a wide range of games. Players choose for themselves whether to play something quick and simple or a more tactical game.",
     rules: [
