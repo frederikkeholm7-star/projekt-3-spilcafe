@@ -61,6 +61,14 @@ function showGameDialog(id) {
     `${game.difficulty}/5`;
   document.getElementById("dialog-image").src = game.image;
   document.getElementById("dialog-image").alt = game.title;
+  document.getElementById("dialog-winning").textContent = game.winning;
+
+  // Indsætter spillets regler som punkter i listen
+  const rulesList = document.getElementById("dialog-rules");
+  rulesList.innerHTML = "";
+  game.rules.forEach((rule) => {
+    rulesList.innerHTML += `<li>${rule}</li>`;
+  });
 
   // Åbner dialogen som modal
   gameDialog.showModal();
