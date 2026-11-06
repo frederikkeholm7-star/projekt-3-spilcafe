@@ -3,3 +3,13 @@
 // displayGames(list) - shows game cards in #game-list
 // showGameDialog(id) - opens the dialog for one game
 // Card classes: game-card, game-image, game-title, game-meta
+
+const gameList = document.getElementById("game-list");
+const gameDialog = document.getElementById("game-dialog");
+const dialogCloseButton = document.getElementById("dialog-close");
+const filterButton = document.getElementById("filter-toggle");
+const filterPanel = document.getElementById("filter-panel");
+const filterPanelCloseButton = document.getElementById("filter-close");
+const darkOverlay = document.getElementById("overlay");
+
+function displayGames(list) {}
