@@ -69,6 +69,23 @@ function showGameDialog(id) {
 // Lukker dialogen ved klik på Close
 dialogCloseButton.addEventListener("click", () => gameDialog.close());
 
+// Åbner og lukker filterpanelet og det mørke lag
+function toggleFilterPanel() {
+  filterPanel.classList.toggle("active");
+  darkOverlay.classList.toggle("active");
+}
+
+// Lukker filterpanelet og det mørke lag
+function closeFilterPanel() {
+  filterPanel.classList.remove("active");
+  darkOverlay.classList.remove("active");
+}
+
+// Kobler filterknappen, krydset og det mørke lag til panelet
+filterButton.addEventListener("click", toggleFilterPanel);
+filterPanelCloseButton.addEventListener("click", closeFilterPanel);
+darkOverlay.addEventListener("click", closeFilterPanel);
+
 // Viser alle spil, når DOM'en er indlæst
 window.addEventListener("DOMContentLoaded", () => {
   displayGames(games);
