@@ -33,7 +33,6 @@ const applyFilters = document.querySelector("#apply-filters"); //FINDER SHOW GAM
         );
     }
 
-    
     // VISER SPILLENE VED HJÆLP AF FUNKTIONEN FRA UI.JS
     displayGames(filteredGames);
     }
@@ -42,3 +41,17 @@ const applyFilters = document.querySelector("#apply-filters"); //FINDER SHOW GAM
     playingTime.addEventListener("input", () => {
     timeValue.textContent = `Up to ${playingTime.value} min`;
     });
+
+     // FIND DE VALGTE KATEGORIER
+    const categories = Array.from(
+        document.querySelectorAll('input[name="category"]:checked') //FINDER ALLE KATEGORI-CHECHBOXES, SOM BRUGEREN HAR VALGT
+    ).map(cb => cb.value);
+
+     // FILTRER EFTER KATEGORI
+    if (categories.length > 0) { //UNDERSØGER OM BRUGEREN HAR VALGT MINDST 1 KATEGORI
+        filteredGames = filteredGames.filter(game => //GENNEMGÅR ALLE SPILLENE OG BEHOLDER KUN DEM, DER PASSER TIL DE VALGTE KATEGORIER
+            game.categories.some(category => //ET SPIL KAN HAVE FLERE KATEGORIER I DATA.JS
+                categories.includes(category) //UNDERSØGER OM KATEGORIEN FINDES BLANDT DE VALGTE KATEGORIER
+            )
+        );
+    }
