@@ -29,20 +29,11 @@ const applyFilters = document.querySelector("#apply-filters"); //FINDER SHOW GAM
 
     if (selectedTime < 120) {
         filteredGames = filteredGames.filter(game =>
-            game.minTime <= selectedTime
+            game.maxTime <= selectedTime
         );
     }
 
-    // VISER SPILLENE VED HJÆLP AF FUNKTIONEN FRA UI.JS
-    displayGames(filteredGames);
-    }
-
-    // OPDATER TEKSTEN OVER SLIDEREN
-    playingTime.addEventListener("input", () => {
-    timeValue.textContent = `Up to ${playingTime.value} min`;
-    });
-
-     // FIND DE VALGTE KATEGORIER
+    // FIND DE VALGTE KATEGORIER
     const categories = Array.from(
         document.querySelectorAll('input[name="category"]:checked') //FINDER ALLE KATEGORI-CHECHBOXES, SOM BRUGEREN HAR VALGT
     ).map(cb => cb.value);
@@ -55,6 +46,19 @@ const applyFilters = document.querySelector("#apply-filters"); //FINDER SHOW GAM
             )
         );
     }
+
+    // VISER SPILLENE VED HJÆLP AF FUNKTIONEN FRA UI.JS
+    displayGames(filteredGames);
+    }
+
+    // OPDATER TEKSTEN OVER SLIDEREN
+    playingTime.addEventListener("input", () => {
+        if (Number(playingTime.value) === 120) {
+        timeValue.textContent = "120+ min";
+        }   else {
+        timeValue.textContent = `Up to ${playingTime.value} min`;
+        }
+    });
 
     //NU SKAL DER TILFØJES EN EVENTLISTENER TIL "SHOW GAMES" KNAPPEN, SÅ FILTRERINGEN KØRES NÅR BRUGEREN TRYKKER PÅ KNAPPEN
     // SHOW GAMES KNAPPEN
