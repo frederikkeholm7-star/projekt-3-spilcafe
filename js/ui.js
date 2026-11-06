@@ -18,5 +18,10 @@ function displayGames(list) {
   list.forEach((game) => {
     const gameCard = document.createElement("div");
     gameCard.className = "game-card";
+
+    gameCard.innerHTML = `
+    <img src="${game.image}" alt="${game.title}"
+    class="game-image">
+    `;
   });
 }
