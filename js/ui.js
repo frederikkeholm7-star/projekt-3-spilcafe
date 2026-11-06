@@ -29,7 +29,12 @@ function displayGames(list) {
 
             <span class="time">${game.minTime}-${game.maxTime} min</span>
         </div>
-
     `;
+
+    gameList.appendChild(gameCard);
   });
 }
+
+window.addEventListener("DOMContentLoaded", () => {
+  displayGames(games);
+});
