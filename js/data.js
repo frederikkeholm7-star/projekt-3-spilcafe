@@ -26,7 +26,7 @@ const games = [
 
   {
     id: 2,
-    title: "What Do You Meme?",
+    title: "What Do You Meme",
     description:
       "A party game for the social media generation, in which players compete to create the funniest meme. Humour and timing are decisive when image and caption must come together.",
     rules: [
