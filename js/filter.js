@@ -7,3 +7,38 @@ const timeValue = document.querySelector("#time-value"); //FINDER TEKSTEN OVER S
 const categoryInputs = document.querySelectorAll('input[name="category"]'); //FINDER ALLE CHECKBOXES
 const applyFilters = document.querySelector("#apply-filters"); //FINDER SHOW GAMES KNAPPEN 
 
+    // FILTRERING AF BRÆTSPIL
+    function filtrerSpil() {
+
+    // LAVER EN KOPI AF ALLE SPILLENE FRA DATA.JS
+    let filteredGames = [...games];
+
+    // FILTRER EFTER ANTAL SPILLERE
+    const selectedPlayers = document.querySelector('input[name="players"]:checked');
+
+    if (selectedPlayers) {
+        const players = Number(selectedPlayers.value);
+
+        filteredGames = filteredGames.filter(game =>
+            game.minPlayers <= players && game.maxPlayers >= players
+        );
+    }
+
+    // FILTRER EFTER SPILLETID
+    const selectedTime = Number(playingTime.value);
+
+    if (selectedTime < 120) {
+        filteredGames = filteredGames.filter(game =>
+            game.minTime <= selectedTime
+        );
+    }
+
+    
+    // VISER SPILLENE VED HJÆLP AF FUNKTIONEN FRA UI.JS
+    displayGames(filteredGames);
+    }
+
+    // OPDATER TEKSTEN OVER SLIDEREN
+    playingTime.addEventListener("input", () => {
+    timeValue.textContent = `Up to ${playingTime.value} min`;
+    });
