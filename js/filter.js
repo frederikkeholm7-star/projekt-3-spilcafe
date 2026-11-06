@@ -55,3 +55,9 @@ const applyFilters = document.querySelector("#apply-filters"); //FINDER SHOW GAM
             )
         );
     }
+
+    //NU SKAL DER TILFØJES EN EVENTLISTENER TIL "SHOW GAMES" KNAPPEN, SÅ FILTRERINGEN KØRES NÅR BRUGEREN TRYKKER PÅ KNAPPEN
+    // SHOW GAMES KNAPPEN
+    applyFilters.addEventListener("click", () => { //VARIABLEN JEG OPRETTEDE I STARTEN 
+    filtrerSpil();
+    });
