@@ -35,6 +35,24 @@ function displayGames(list) {
   });
 }
 
+function showGameDialog(id) {
+  const game = games.find((game) => game.id === id);
+  document.getElementById("dialog-title").textContent = game.title;
+  document.getElementById("dialog-description").textContent = game.description;
+  document.getElementById("dialog-players").textContent =
+    `${game.minPlayers}-${game.maxPlayers} Players`;
+  document.getElementById("dialog-time").textContent =
+    `${game.minTime}-${game.maxTime} min`;
+  document.getElementById("dialog-category").textContent =
+    game.categories.join(", ");
+  document.getElementById("dialog-difficulty").textContent =
+    `${game.difficulty}/5`;
+  document.getElementById("dialog-image").src = game.image;
+  document.getElementById("dialog-image").alt = game.title;
+
+  gameDialog.showModal();
+}
+
 window.addEventListener("DOMContentLoaded", () => {
   displayGames(games);
 });
