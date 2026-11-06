@@ -2,18 +2,26 @@
 
 const games = [
   {
-    id: 0,
-    title: "",
-    description: "",
-    rules: "",
-    minPlayers: 0,
-    maxPlayers: 0,
-    minTime: 0,
-    maxTime: 0,
-    categories: [],
-    difficulty: 0,
-    age: 0,
-    image: "",
+    id: 1,
+    title: "Bezzerwizzer",
+    description:
+      "A general knowledge quiz game that combines knowledge across a broad range of topics with tactical decisions. Players decide for themselves where to take risks and where to challenge their opponents.",
+    rules: [
+      "Divide into teams and draw one category tile per team.",
+      "On your turn, you can keep your category or swap it with another team (Zwap).",
+      "Answer correctly to earn 3 points. Wrong answers earn 0 points.",
+      "Once all teams have answered, a new round begins with new categories.",
+    ],
+    winning:
+      "The first team to reach 20 points wins once the round is completed. If multiple teams are tied, additional questions are played until one team wins.",
+    minPlayers: 1,
+    maxPlayers: 12,
+    minTime: 45,
+    maxTime: 45,
+    categories: ["party-game", "trivia"],
+    difficulty: 1.5,
+    age: 14,
+    image: "img/bezzerwizzer.png",
   },
 
   {
