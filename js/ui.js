@@ -30,7 +30,7 @@ function displayGames(list) {
             <span class="time">${game.minTime}-${game.maxTime} min</span>
         </div>
     `;
-
+    gameCard.addEventListener("click", () => showGameDialog(game.id));
     gameList.appendChild(gameCard);
   });
 }
