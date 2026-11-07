@@ -7,6 +7,7 @@ const timeValue = document.querySelector("#time-value"); //FINDER TEKSTEN OVER S
 const categoryInputs = document.querySelectorAll('input[name="category"]'); //FINDER ALLE CHECKBOXES
 const applyFilters = document.querySelector("#apply-filters"); //FINDER SHOW GAMES KNAPPEN 
 const resetFilters = document.querySelector("#reset-filters"); // FINDER RESET-KNAPPEN FRA HTML 
+const sortSelect = document.querySelector("#predefined-search"); // FINDER SORTERINGSMENUEN FRA HTML
 
     // FILTRERING AF BRÆTSPIL
     function filtrerSpil() {
@@ -86,4 +87,44 @@ const resetFilters = document.querySelector("#reset-filters"); // FINDER RESET-K
 
     // VIS ALLE SPIL IGEN
     displayGames(games);
+    });
+
+
+
+    
+     sortSelect.addEventListener("change", () => {
+
+    // LAVER EN KOPI AF ALLE SPILLENE
+    let sortedGames = [...games];
+
+    // SORTERER SPILLENE ALFABETISK
+    if (sortSelect.value === "name") {
+        sortedGames.sort((a, b) =>
+            a.title.localeCompare(b.title)
+        );
+    }
+
+     // SORTERER EFTER SPILLETID (KORTESTE FØRST)
+    else if (sortSelect.value === "time") {
+    sortedGames.sort((a, b) =>
+        a.minTime - b.minTime
+    );
+    }
+
+     // SORTERER EFTER SVÆRHEDSGRAD (NEMMESTE FØRST)
+    else if (sortSelect.value === "difficulty") {
+    sortedGames.sort((a, b) =>
+        a.difficulty - b.difficulty
+    );
+    }
+
+     // SORTERER EFTER ANTAL SPILLERE (FÆRREST FØRST)
+    else if (sortSelect.value === "players") {
+    sortedGames.sort((a, b) =>
+        a.minPlayers - b.minPlayers
+    );
+    }
+
+    // VISER SPILLENE I DEN NYE RÆKKEFØLGE
+    displayGames(sortedGames);
     });
