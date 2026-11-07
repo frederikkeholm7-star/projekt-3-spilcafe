@@ -9,8 +9,10 @@ const applyFilters = document.querySelector("#apply-filters"); //FINDER SHOW GAM
 const resetFilters = document.querySelector("#reset-filters"); // FINDER RESET-KNAPPEN FRA HTML 
 const sortSelect = document.querySelector("#predefined-search"); // FINDER SORTERINGSMENUEN FRA HTML
 
+    let currentGames = [...games]; // GEMMER DE SPIL, DER AKTUELT VISES 
+
     // FILTRERING AF BRÆTSPIL
-    function filtrerSpil() {
+    function filterGames() {
 
     // LAVER EN KOPI AF ALLE SPILLENE FRA DATA.JS
     let filteredGames = [...games];
@@ -49,9 +51,14 @@ const sortSelect = document.querySelector("#predefined-search"); // FINDER SORTE
         );
     }
 
-    // VISER SPILLENE VED HJÆLP AF FUNKTIONEN FRA UI.JS
-    displayGames(filteredGames);
+     // GEMMER DE FILTREREDE SPIL
+    currentGames = filteredGames;
+
+    // SORTERER OG VISER DE FILTREREDE SPIL
+    sortGames();
     }
+
+    
 
     // OPDATER TEKSTEN OVER SLIDEREN
     playingTime.addEventListener("input", () => {
@@ -64,8 +71,8 @@ const sortSelect = document.querySelector("#predefined-search"); // FINDER SORTE
 
     //NU SKAL DER TILFØJES EN EVENTLISTENER TIL "SHOW GAMES" KNAPPEN, SÅ FILTRERINGEN KØRES NÅR BRUGEREN TRYKKER PÅ KNAPPEN
     // SHOW GAMES KNAPPEN
-    applyFilters.addEventListener("click", () => { //VARIABLEN JEG OPRETTEDE I STARTEN 
-    filtrerSpil();
+    applyFilters.addEventListener("click", () => {
+    filterGames();
     });
 
      // RESET FILTERS
@@ -85,17 +92,23 @@ const sortSelect = document.querySelector("#predefined-search"); // FINDER SORTE
     playingTime.value = 60;
     timeValue.textContent = "Up to 60 min";
 
+
+    // NULSTIL SORTERINGSMENUEN
+    sortSelect.value = "";
+
+    // NULSTIL LISTEN MED SPIL
+    currentGames = [...games];
+
     // VIS ALLE SPIL IGEN
-    displayGames(games);
+    displayGames(currentGames);
     });
 
-
-
     
-     sortSelect.addEventListener("change", () => {
+    // SORTERER DEN AKTUELLE LISTE MED SPIL
+    function sortGames() {
 
-    // LAVER EN KOPI AF ALLE SPILLENE
-    let sortedGames = [...games];
+    // LAVER EN KOPI AF DE FILTREREDE SPIL
+    let sortedGames = [...currentGames];
 
     // SORTERER SPILLENE ALFABETISK
     if (sortSelect.value === "name") {
@@ -104,27 +117,33 @@ const sortSelect = document.querySelector("#predefined-search"); // FINDER SORTE
         );
     }
 
-     // SORTERER EFTER SPILLETID (KORTESTE FØRST)
+    // SORTERER EFTER SPILLETID (KORTESTE FØRST)
     else if (sortSelect.value === "time") {
-    sortedGames.sort((a, b) =>
-        a.minTime - b.minTime
-    );
+        sortedGames.sort((a, b) =>
+            a.minTime - b.minTime
+        );
     }
 
-     // SORTERER EFTER SVÆRHEDSGRAD (NEMMESTE FØRST)
+    // SORTERER EFTER SVÆRHEDSGRAD (NEMMESTE FØRST)
     else if (sortSelect.value === "difficulty") {
-    sortedGames.sort((a, b) =>
-        a.difficulty - b.difficulty
-    );
+        sortedGames.sort((a, b) =>
+            a.difficulty - b.difficulty
+        );
     }
 
-     // SORTERER EFTER ANTAL SPILLERE (FÆRREST FØRST)
+    // SORTERER EFTER ANTAL SPILLERE (FÆRREST FØRST)
     else if (sortSelect.value === "players") {
-    sortedGames.sort((a, b) =>
-        a.minPlayers - b.minPlayers
-    );
+        sortedGames.sort((a, b) =>
+            a.minPlayers - b.minPlayers
+        );
     }
 
     // VISER SPILLENE I DEN NYE RÆKKEFØLGE
     displayGames(sortedGames);
+    }
+
+    // KØRER SORTERING NÅR BRUGEREN VÆLGER I MENUEN
+    sortSelect.addEventListener("change", () => {
+    sortGames();
     });
+   
