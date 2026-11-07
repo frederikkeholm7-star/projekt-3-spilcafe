@@ -6,6 +6,7 @@ const playingTime = document.querySelector("#playing-time"); //FINDER SLIDEREN, 
 const timeValue = document.querySelector("#time-value"); //FINDER TEKSTEN OVER SLIDEREN, SOM ALLEREDE ER I HTML
 const categoryInputs = document.querySelectorAll('input[name="category"]'); //FINDER ALLE CHECKBOXES
 const applyFilters = document.querySelector("#apply-filters"); //FINDER SHOW GAMES KNAPPEN 
+const resetFilters = document.querySelector("#reset-filters"); // FINDER RESET-KNAPPEN FRA HTML 
 
     // FILTRERING AF BRÆTSPIL
     function filtrerSpil() {
@@ -64,4 +65,25 @@ const applyFilters = document.querySelector("#apply-filters"); //FINDER SHOW GAM
     // SHOW GAMES KNAPPEN
     applyFilters.addEventListener("click", () => { //VARIABLEN JEG OPRETTEDE I STARTEN 
     filtrerSpil();
+    });
+
+     // RESET FILTERS
+    resetFilters.addEventListener("click", () => {
+
+    // FJERN VALGTE SPILLERE
+    playerInputs.forEach(input => {
+        input.checked = false;
+    });
+
+    // FJERN VALGTE KATEGORIER
+    categoryInputs.forEach(input => {
+        input.checked = false;
+    });
+
+    // NULSTIL SPILLETID
+    playingTime.value = 60;
+    timeValue.textContent = "Up to 60 min";
+
+    // VIS ALLE SPIL IGEN
+    displayGames(games);
     });
