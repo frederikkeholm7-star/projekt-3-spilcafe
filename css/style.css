@@ -3,3 +3,144 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+:root {
+    --primary-color: #212121;
+    --secondary-color: #7D2343;
+    --accent-color: #4f1d2d;
+    --background-color: #EDEBE8 ;
+    --text-color: #212121;
+    --light-gray: #F0ECE8;
+    --medium-gray: #DCD6D1;
+    --dark-gray: #77716E;
+    --white: #FFFFFF;
+    --shadow: 0 4px 12px rgba(50, 35, 30, 0.10);
+    --border-radius: 12px;
+    --transition: all 0.3s ease;
+}
+
+/* Body og skrifttype */
+body {
+    color: var(--text-color);
+    background-color: var(--background-color);
+}
+
+/* Overskrifter og produktnavne */
+header h1,
+.filter-header h2,
+.product-title {
+    font-family: 'Fraunces', serif;
+    color: var(--primary-color);
+}
+
+/* Header */
+header {
+    border-bottom: 2px solid var(--medium-gray);
+}
+
+/* Søgefelt */
+.search-input,
+.predefined-select {
+    border: 1px solid var(--medium-gray);
+    border-radius: 25px;
+    background-color: var(--white);
+    color: var(--text-color);
+    font-family: 'Inter', sans-serif;
+}
+.search-input:focus {
+    outline: none;
+    border-color: var(--secondary-color);
+    box-shadow: var(--shadow);
+}
+
+/* Filterknap */
+.filter-button {
+    background-color: var(--secondary-color);
+    border-radius: 25px;
+    color: var(--white);
+}
+
+.filter-button:hover {
+    background-color: #651A36;
+}
+
+/* Filterpanel */
+.filter-panel {
+    background-color: var(--light-gray);
+}
+
+.filter-header {
+    background-color: var(--white);
+    color: var(--primary-color);
+    border-bottom: 1px solid var(--medium-gray);
+}
+
+.filter-close {
+    color: var(--primary-color);
+}
+
+.filter-close:hover {
+    color: var(--secondary-color);
+}
+
+/* Filterindhold */
+.filter-label {
+    color: var(--primary-color);
+}
+
+
+/* Filter footer */
+.filter-footer {
+    background-color: var(--light-gray);
+    border-top: 1px solid var(--medium-gray);
+}
+
+/* Filterknap – anvend 'show games' */
+.apply-button {
+   background-color: var(--secondary-color);
+    border-radius: 25px;
+    color: var(--white);
+}
+
+.apply-button:hover {
+    background-color: #651A36;
+}
+
+/* Overlay */
+.overlay {
+    background-color: rgba(41, 39, 37, 0.35);
+}
+
+/* Spillervalg og spilletid */
+
+/* Kategorier */
+.checkbox-label:hover,
+.color-label:hover,
+.rating-label:hover {
+    background-color: #E8E1DC;
+}
+
+/* Placering af spilkort */
+
+/* Selve spilkortene */
+
+/* Game Details, Dialogvindue */
+dialog {
+    background-color: var(--white);
+    border-radius: 18px;
+}
+
+/* Footer */
+footer {
+    border-top: 1px solid var(--medium-gray);
+    color: var(--dark-gray);
+}
+
+/* RESPONSIVE DESIGN */
+
+
+/* SCROLLBAR STYLING */
+
+
+
+
