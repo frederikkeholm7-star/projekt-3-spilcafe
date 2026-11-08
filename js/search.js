@@ -10,4 +10,4 @@ function searchGames(list) {
   return list.filter((game) => game.title.toLowerCase().includes(searchText));
 }
 // Opdaterer listen, mens brugeren skriver
-searchInput.addEventListener("input, filterGames");
+searchInput.addEventListener("input", filterGames);
