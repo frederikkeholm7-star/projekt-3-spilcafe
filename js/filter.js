@@ -93,8 +93,8 @@ resetFilters.addEventListener("click", () => {
   });
 
   // NULSTIL SPILLETID
-  playingTime.value = 60;
-  timeValue.textContent = "Up to 60 min";
+  playingTime.value = 120;
+  timeValue.textContent = "120+ min";
 
   // NULSTIL SORTERINGSMENUEN
   sortSelect.value = "";
