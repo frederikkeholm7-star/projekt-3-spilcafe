@@ -1,5 +1,6 @@
 "use strict";
 
+// ARRAY MED ALLE 12 BRÆTSPIL. HVERT SPIL ER ET OBJEKT MED DE SAMME FELTER
 const games = [
   {
     id: 1,
