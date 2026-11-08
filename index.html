@@ -144,6 +144,7 @@
                     </div>
                 </div>
 
+                <!-- KNAPPER I BUNDEN AF FILTERPANELET -->
                 <div class="filter-footer">
                     <button id="reset-filters" class="reset-button">Reset</button>
                     <button id="apply-filters" class="apply-button">Show games</button>
@@ -154,11 +155,13 @@
             </div>
 
             <section class="game-list" id="game-list">
-                <!-- Game cards will be dynamically inserted here -->
+                <!-- HER INDSÆTTER UI.JS SPILLEKORTENE -->
             </section>
 
 
         </main>
+
+        <!-- FOOTER -->
         <footer>
             <p>© 2026 Checkmate</p>
         </footer>
@@ -166,6 +169,8 @@
 
 
     </div>
+
+    <!-- DIALOG MED DETALJER OM ET SPIL. UDFYLDES AF UI.JS -->
     <dialog id="game-dialog">
         <article class="dialog-content">
             <img id="dialog-image" src="" alt="" class="game-image">
@@ -181,6 +186,7 @@
 
             <div id="dialog-difficulty" class="game-difficulty"></div>
 
+            <!-- REGLER OG HVORDAN MAN VINDER. UDFYLDES AF UI.JS -->
             <h3>Rules</h3>
             <ol id="dialog-rules"></ol>
             <h3>How to win</h3>
@@ -191,6 +197,8 @@
             </menu>
         </article>
     </dialog>
+
+    <!-- MØRKT LAG BAG FILTERPANELET -->
     <div id="overlay" class="overlay"></div>
 </body>
 
