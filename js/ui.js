@@ -70,8 +70,9 @@ function showGameDialog(id) {
     rulesList.innerHTML += `<li>${rule}</li>`;
   });
 
-  // Åbner dialogen som modal
+  // SCROLLER DIALOGEN TIL TOPPEN, SÅ DEN ALTID STARTER VED BILLEDET
   gameDialog.showModal();
+  gameDialog.scrollTop = 0;
 }
 
 // Lukker dialogen ved klik på Close
