@@ -423,10 +423,37 @@ dialog::backdrop {
 .game-time,
 .game-category,
 .game-difficulty {
-  padding: 6px 10px;
-  border-radius: 20px;
-  background-color: var(--color-grey-300);
+  padding: 4px 14px;
+  border-radius: 30px;
+  background-color: rgba(255, 255, 255, 0.5);
   font-size: 0.85rem;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+/* IKONER I PILLERNE, SOM I FIGMA */
+.game-players::before,
+.game-time::before,
+.game-difficulty::before {
+  content: "";
+  width: 13px;
+  height: 13px;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.game-players::before {
+  background-image: url("../img/icon-players.svg");
+}
+
+.game-time::before {
+  background-image: url("../img/icon-hourglass.svg");
+}
+
+.game-difficulty::before {
+  background-image: url("../img/icon-brain.svg");
 }
 
 #dialog-rules {
