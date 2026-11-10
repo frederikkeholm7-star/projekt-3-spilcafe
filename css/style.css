@@ -51,7 +51,7 @@ header {
   border-bottom: 1px solid var(--color-grey-500);
 }
 
-/* SØGERÆKKE: SØGEFELT, SORTERING OG FILTERKNAP PÅ ÉN LINJE MED LUFT NED TIL SPILKORTENE */
+/* Søgerække: søgefelt, sortering og filterknap, på en linje */
 .search-container {
   display: flex;
   align-items: center;
@@ -118,7 +118,7 @@ header {
   width: min(400px, 90vw);
   height: 100vh;
 
-  background-color: var(--color-grey-300);
+  background-color: var(--color-stone-100);
   box-shadow: var(--shadow);
 
   transform: translateX(100%);
@@ -180,7 +180,7 @@ header {
   display: flex;
   gap: 12px;
   padding: 20px;
-  background-color: var(--color-grey-300);
+  background-color: var(--color-white);
   border-top: 1px solid var(--color-grey-500);
 }
 
