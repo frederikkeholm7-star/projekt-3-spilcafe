@@ -398,6 +398,19 @@ dialog::backdrop {
   margin-bottom: 20px;
 }
 
+/* TITEL TIL VENSTRE, TID-PILLE TIL HØJRE */
+.dialog-title-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+/* STORE FORBOGSTAVER I KATEGORIERNE, FX "Card Game" */
+.game-category {
+  text-transform: capitalize;
+}
+
 .dialog-content h2 {
   margin-bottom: 10px;
   font-size: 2rem;
@@ -422,7 +435,8 @@ dialog::backdrop {
 .game-players,
 .game-time,
 .game-category,
-.game-difficulty {
+.game-difficulty,
+.game-age {
   padding: 4px 14px;
   border-radius: 30px;
   background-color: rgba(255, 255, 255, 0.5);
