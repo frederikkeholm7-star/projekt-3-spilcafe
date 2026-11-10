@@ -13,6 +13,21 @@ const filterPanel = document.getElementById("filter-panel");
 const filterPanelCloseButton = document.getElementById("filter-close");
 const darkOverlay = document.getElementById("overlay");
 
+// SKRIVER ÉT TAL, NÅR MIN OG MAX ER ENS, FX "2 Players" I STEDET FOR "2-2 Players"
+function formatPlayers(game) {
+  if (game.minPlayers === game.maxPlayers) {
+    return `${game.minPlayers} Players`;
+  }
+  return `${game.minPlayers}-${game.maxPlayers} Players`;
+}
+
+// SKRIVER ÉT TAL, NÅR MIN OG MAX ER ENS, FX "60 min" I STEDET FOR "60-60 min"
+function formatTime(game) {
+  if (game.minTime === game.maxTime) {
+    return `${game.minTime} min`;
+  }
+  return `${game.minTime}-${game.maxTime} min`;
+}
 // Genererer et spilkort for hvert spil i listen og indsætter det i spillisten
 function displayGames(list) {
   // Tømmer spillisten, så tidligere viste kort fjernes
@@ -31,9 +46,9 @@ function displayGames(list) {
         <h3 class="game-title">${game.title}</h3>
 
         <div class="game-meta">
-            <span class="players">${game.minPlayers}-${game.maxPlayers} Players</span>
+            <span class="players">${formatPlayers(game)}</span>
 
-            <span class="time">${game.minTime}-${game.maxTime} min</span>
+            <span class="time">${formatTime(game)}</span>
         </div>
     `;
 
@@ -51,10 +66,8 @@ function showGameDialog(id) {
   // Udfylder dialogens felter med spillets data
   document.getElementById("dialog-title").textContent = game.title;
   document.getElementById("dialog-description").textContent = game.description;
-  document.getElementById("dialog-players").textContent =
-    `${game.minPlayers}-${game.maxPlayers} Players`;
-  document.getElementById("dialog-time").textContent =
-    `${game.minTime}-${game.maxTime} min`;
+  document.getElementById("dialog-players").textContent = formatPlayers(game);
+  document.getElementById("dialog-time").textContent = formatTime(game);
   document.getElementById("dialog-category").textContent = game.categories
     .join(", ")
     .replaceAll("-", " ");
