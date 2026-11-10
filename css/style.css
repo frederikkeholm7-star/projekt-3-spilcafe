@@ -52,6 +52,14 @@ header {
   border-bottom: 1px solid var(--medium-gray);
 }
 
+/* SØGERÆKKE: SØGEFELT, SORTERING OG FILTERKNAP PÅ ÉN LINJE MED LUFT NED TIL SPILKORTENE */
+.search-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 32px 0 56px;
+}
+
 /* Søgefelt */
 .search-input,
 .predefined-select {
