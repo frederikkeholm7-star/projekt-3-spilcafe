@@ -45,6 +45,19 @@ header h1 {
   font-weight: 600;
 }
 
+/* LOGO OG SIDENS NAVN VED SIDEN AF HINANDEN */
+.logo {
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+}
+
+.logo img {
+  height: 48px;
+  position: relative;
+  top: 4px;
+}
+
 /* Header */
 header {
   padding: 28px 0 20px;
