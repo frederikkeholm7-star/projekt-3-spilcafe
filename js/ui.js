@@ -55,10 +55,12 @@ function showGameDialog(id) {
     `${game.minPlayers}-${game.maxPlayers} Players`;
   document.getElementById("dialog-time").textContent =
     `${game.minTime}-${game.maxTime} min`;
-  document.getElementById("dialog-category").textContent =
-    game.categories.join(", ");
+  document.getElementById("dialog-category").textContent = game.categories
+    .join(", ")
+    .replaceAll("-", " ");
   document.getElementById("dialog-difficulty").textContent =
     `${game.difficulty}/5`;
+  document.getElementById("dialog-age").textContent = `${game.age}+`;
   document.getElementById("dialog-image").src = game.image;
   document.getElementById("dialog-image").alt = game.title;
   document.getElementById("dialog-winning").textContent = game.winning;
